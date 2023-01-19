@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 // logout.spec.js
-import { login } from './helpers';
+import { login } from '../e2e/helpers';
 
 describe('Logout feature', () => {
   beforeEach(() => {

@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+<<<<<<< HEAD
     "test": "jest",
     "start:server": "node server.js",
     "test:e2e": "npm run start:server && npx cypress run",
@@ -14,6 +15,8 @@
     "eslintCheck": "eslint .",
     "deploy": "gh-pages -d build",
     "postmerge": "npm run prettierCheck && npm run deploy",
+=======
+>>>>>>> parent of e1047dd (Installs  Prettier and eslint)
     "build": "sass src/scss:dist/css",
     "start": "sass --watch src/scss:dist/css & live-server"
   },
@@ -21,6 +24,7 @@
   "author": "Noroff",
   "license": "ISC",
   "devDependencies": {
+<<<<<<< HEAD
     "@babel/core": "^7.20.12",
     "@babel/plugin-transform-modules-commonjs": "^7.20.11",
     "@babel/preset-env": "^7.20.2",
@@ -29,8 +33,9 @@
     "eslint": "^8.31.0",
     "gh-pages": "^4.0.0",
     "jest": "^29.3.1",
+=======
+>>>>>>> parent of e1047dd (Installs  Prettier and eslint)
     "live-server": "^1.2.2",
-    "prettier": "^2.8.3",
     "sass": "^1.54.8"
   },
   "dependencies": {
