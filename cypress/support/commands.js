@@ -1,3 +1,34 @@
+Cypress.Commands.add('login', () => {
+  cy.visit('/login');
+  cy.get('input[name="username"]').type('username');
+  cy.get('input[name="password"]').type('password');
+  cy.get('button').click();
+});
+const commands = require('../support/commands');
+
+module.exports = (on, config) => {
+  on('before:browser:launch', (browser = {}, args) => {
+    if (browser.name === 'chrome') {
+      args.push('--disable-web-security');
+      return args;
+    }
+
+    if (browser.name === 'electron') {
+      args['fullscreen'] = false;
+      return args;
+    }
+  });
+  on('task', {
+    log(message) {
+      console.log(message);
+      return null;
+    },
+  });
+  Object.keys(commands).forEach((command) =>
+    Cypress.Commands.add(command, commands[command])
+  );
+};
+
 // ***********************************************
 // This example commands.js shows you how to
 // create various custom commands and overwrite
