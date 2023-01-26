@@ -1,7 +1,8 @@
 describe('My Feature', () => {
   beforeEach(() => {
     // Visit the page before each test
-    cy.visit('http://127.0.0.1:8080/login');
+    // cy.visit('http://127.0.0.1:8080/login');
+    cy.visit('/');
   });
 
   it('displays the correct title', () => {

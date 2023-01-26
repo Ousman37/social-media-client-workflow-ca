@@ -4,6 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+
+    "test": "jest",
+
     "start:server": "node server.js",
     "test": "npm run test-unit && npm run test-e2e-cli",
     "test-unit": "jest",
@@ -14,6 +17,7 @@
     "eslintCheck": "eslint .",
     "deploy": "gh-pages -d build",
     "postmerge": "npm run prettierCheck && npm run deploy",
+
     "build": "sass src/scss:dist/css",
     "start": "sass --watch src/scss:dist/css & live-server"
   },
@@ -21,22 +25,8 @@
   "author": "Noroff",
   "license": "ISC",
   "devDependencies": {
-    "@babel/core": "^7.20.12",
-    "@babel/plugin-transform-modules-commonjs": "^7.20.11",
-    "@babel/preset-env": "^7.20.2",
-    "@cypress/webpack-preprocessor": "^5.16.1",
-    "babel-jest": "^29.3.1",
-    "cypress": "^12.4.0",
-    "cypress-testing-library": "^4.0.0",
-    "eslint": "^8.31.0",
-    "eslint-plugin-cypress": "^2.12.1",
-    "eslint-plugin-jest": "^27.2.1",
-    "gh-pages": "^4.0.0",
-    "jest": "^29.3.1",
     "live-server": "^1.2.2",
-    "prettier": "^2.8.3",
-    "sass": "^1.54.8",
-    "typescript": "^4.9.4"
+    "sass": "^1.54.8"
   },
   "dependencies": {
     "bootstrap-dark-5": "^1.1.3",
